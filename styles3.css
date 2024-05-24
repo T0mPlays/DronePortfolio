@@ -1,0 +1,247 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Dark background color */
+    color: #ccc; /* Text color */
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 55px;
+    color: #fff; /* Heading text color */
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 500;
+    color: #fff; /* Heading text color */
+}
+
+h4 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #999; /* Lighter text color */
+}
+
+nav {
+    background-color: #333; /* Navbar background color */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: auto;
+    max-width: 12.5%;
+}
+
+.logo img {
+    height: auto;
+    max-width: 100%;
+}
+
+.nav-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.nav-items li {
+    margin: 0 15px;
+}
+
+.nav-items li a {
+    text-decoration: none;
+    color: #ccc; /* Navbar text color */
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-items li a:hover {
+    font-weight: bold;
+    color: #fff; /* Navbar text hover color */
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+    filter: brightness(80%); /* Slightly darken on hover */
+}
+
+.header {
+    background-image: url(./Images-Vids/Boat.jpg);
+    height: 100vh; /* Adjust the height for your design */
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.header .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%; /* Adjust as needed */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 10px; /* Optional: Add some border radius */
+    color: white;
+}
+
+.header .box h1,
+.header .box h2,
+.header .box p {
+    margin: 0;
+}
+
+.header .btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.header .box .btn {
+    margin-top: 1rem;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff; /* Button text color */
+    background-color: #333; /* Button background color */
+    text-transform: capitalize;
+    transition: transform 0.3s ease;
+}
+
+.header .box .btn:hover {
+    color: #000; /* Button text hover color */
+    background-color: #555; /* Button background hover color */
+    transform: scale(1.1);
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #222; /* Section background color */
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #fff; /* Section title color */
+}
+
+section p {
+    color: #ccc; /* Section text color */
+    font-size: 16px;
+}
+
+#gallery {
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.gallery-item img,
+.gallery-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-list {
+    list-style: none; /* Remove bullet points */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .header {
+        height: 70vh; /* Adjust height for smaller screens */
+    }
+
+    .header .box {
+        max-width: 80%;
+    }
+
+    .header .box h1 {
+        font-size: 1.5rem; /* Adjust text size for smaller screens */
+    }
+
+    .header .box h2 {
+        font-size: 1.2rem; /* Adjust text size for smaller screens */
+    }
+
+    .header .box p {
+        font-size: 1rem; /* Adjust text size for smaller screens */
+    }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 576px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .header {
+        height: 50vh; /* Adjust height for very small screens */
+    }
+
+    .header .box {
+        max-width: 90%;
+    }
+
+    .header .box h1 {
+        font-size: 1.2rem; /* Adjust text size for very small screens */
+    }
+
+    .header .box h2 {
+        font-size: 1rem; /* Adjust text size for very small screens */
+    }
+
+    .header .box p {
+        font-size: 0.9rem; /* Adjust text size for very small screens */
+    }
+}
+
+/* Background remains fixed only on larger devices */
+@media only screen and (min-width: 1200px) {
+    .header {
+        background-attachment: fixed;
+    }
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+    .header {
+        height: 70vh; /* Adjust height for smaller screens */
+    }
+}
+

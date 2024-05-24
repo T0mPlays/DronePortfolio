@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script>
+        // Smooth scroll functionality
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('nav a[href^="#"]');
+            
+            for (const link of links) {
+                link.addEventListener("click", clickHandler);
+            }
+            
+            function clickHandler(e) {
+                e.preventDefault();
+                const href = this.getAttribute("href");
+                const offsetTop = document.querySelector(href).offsetTop;
+
+                scroll({
+                    top: offsetTop,
+                    behavior: "smooth"
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./Images-Vids/Photographer.jpg" alt="Logo">
+        </div>
+        <ul class="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://www.instagram.com"><img src="./Icons/instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com"><img src="./Icons/facebook.png" alt="Facebook"></a>
+            <a href="https://www.tiktok.com"><img src="./Icons/tik-tok.png" alt="TikTok"></a>
+            <a href="https://www.youtube.com"><img src="./Icons/youtube.png" alt="YouTube"></a>
+            <a href="https://www.twitter.com"><img src="./Icons/twitter.png" alt="Twitter"></a>
+        </div>
+    </nav>
+
+    <div class="header">
+        <div class="container">
+            <div class="box">
+                <h2>Hey there...</h2>
+                <h1>I'm Tom</h1>
+                <p>
+                    I'm a photographer and drone pilot, hoping to make a small business
+                </p>
+                <div class="btns">
+                    <a href="#gallery" class="btn"> My Work</a>
+                    <a href="#contact" class="btn">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>Hey, I'm Tom. This is my portfolio website showing all of my drone projects, and the services which I offer, by the way, this website was fully created by me in Visual Studio Code using HTML, CSS and pure brain power!</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>I currently don't charge anything as I believe that I need more experience before I can become a professional that charges a service</p>
+    </section>
+    
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="./Images-Vids/Photographer.jpg" alt="Photo 1">
+            </div>
+            <div class="gallery-item">
+                <video autoplay muted loop>
+                    <source src="./Images-Vids/FirstWebsite.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="gallery-item">
+                <img src="./Images-Vids/photo2.jpg" alt="Photo 2">
+            </div>
+            <div class="gallery-item">
+                <img src="./Images-Vids/Boat.jpg" alt="Photo 3">
+            </div>
+            <div class="gallery-item">
+                <img src="./Images-Vids/Boat.jpg" alt="Photo 4">
+            </div>
+            <div class="gallery-item">
+                <img src="./Images-Vids/Boat.jpg" alt="Photo 5">
+            </div>
+            <!-- Add more gallery items here -->
+        </div>
+    </section>
+    
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+            <li>Contact me at: <a href="mailto:tomberry1@btinternet.com">tomberry1@btinternet.com</a></li>
+        </ul>
+    </section>
+
+</body>
+</html>
