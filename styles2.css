@@ -159,18 +159,21 @@ section p {
 
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     grid-gap: 20px;
-    justify-items: center;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 100%;
 }
 
 .gallery-item img,
 .gallery-item video {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer; /* Add cursor pointer for images */
+    cursor: pointer;
 }
 
 .contact-list {
@@ -279,5 +282,19 @@ section p {
 @media only screen and (max-width: 768px) {
     .header {
         height: 70vh; /* Adjust height for smaller screens */
+    }
+}
+
+/* Adjust grid layout for smaller screens */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* Adjust grid layout for larger screens */
+@media (min-width: 1200px) {
+    .gallery-item.large {
+        grid-column: span 2; /* Span two columns for larger images/videos */
     }
 }
