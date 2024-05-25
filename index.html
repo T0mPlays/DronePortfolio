@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles2.css">
     <link rel="icon" href="./Icons/instagram.png" type="image/icon type">
     <script>
-        // Smooth scroll functionality
         document.addEventListener("DOMContentLoaded", function() {
             const links = document.querySelectorAll('nav a[href^="#"]');
             
@@ -25,6 +24,20 @@
                     behavior: "smooth"
                 });
             }
+
+            // Fullscreen functionality
+            const images = document.querySelectorAll('.gallery-item img');
+            images.forEach(img => {
+                img.addEventListener('click', function() {
+                    if (this.requestFullscreen) {
+                        this.requestFullscreen();
+                    } else if (this.webkitRequestFullscreen) { // Safari
+                        this.webkitRequestFullscreen();
+                    } else if (this.msRequestFullscreen) { // IE11
+                        this.msRequestFullscreen();
+                    }
+                });
+            });
         });
     </script>
 </head>
